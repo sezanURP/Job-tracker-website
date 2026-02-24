@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Traker Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+  </head>
+  <body>
+    <header class="w-[80%] mx-auto py-5">
+      <h2 class="text-4xl font-bold">Job Application Tracker</h2>
+      <div class="container grid grid-cols-3 gap-4 mt-2">
+        <div class="job p-3 bg-gray-200 rounded-[10px]">
+          <p>Total</p>
+          <p id="total-count">0</p>
+        </div>
+        <div class="job p-3 bg-gray-200 rounded-[10px]">
+          <p>Interviews</p>
+          <p id="interviews-count" class="text-green-600">0</p>
+        </div>
+        <div class="job p-3 bg-gray-200 rounded-[10px]">
+          <p>Rejected</p>
+          <p id="rejected-count" class="text-red-500">0</p>
+        </div>
+      </div>
+    </header>
+
+    <hr class="my-8 text-gray-400 w-[80%] mx-auto" />
+
+    <main class="w-[80%] mx-auto">
+      <div class="flex justify-between items-center mb-3">
+      <h2 class="text-2xl pb-6 font-medium">Available Jobs</h2>
+      <p id="jobs-count">0 jobs</p>
+      </div>
+      <button onclick="toggleStyle('all-btn')"
+        class="border font-medium px-4 py-2 mr-3.5 rounded-[10px]"
+        id="all-btn"
+      >
+        All
+      </button>
+      <button onclick="toggleStyle('interviews-btn')"
+        class="border font-medium px-4 py-2 mr-3.5 rounded-[10px]"
+        id="interviews-btn"
+      >
+        Interviews
+      </button>
+      <button onclick="toggleStyle('rejected-btn')"
+        class="borderg font-medium px-4 py-2 rounded-[10px]"
+        id="rejected-btn"
+      >
+        Rejected
+      </button>
+
+      <section class="w-full mx-auto" id="all-card">
+        <div class="job-container w-full mx-auto space-y-6">
+          <div
+            class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
+          >
+            <div class="mobile-1 space-y-2 p-3 mt-4">
+              <div class="job-card-header">
+                <h3 class="text-2xl font-medium">Mobile First Corp</h3>
+                <p class="text-lg text-gray-500">React Native Developer</p>
+              </div>
+
+              <div class="job-card-middle">
+                <ul class="selary flex gap-3 text-sm text-gray-500">
+                  <li><i class="fa-solid fa-dot"></i>Remote</li>
+                  <li><i class="fa-solid fa-dot"></i>Full Time</li>
+                  <li><i class="fa-solid fa-dot"></i>$130000-$175000</li>
+                </ul>
+              </div>
+
+              <div class="job-card-bottom">
+                <p class="text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <br />
+                <p>
+                  Build cross-platform mobile applications using React Native.
+                  Work on products used by millions of users worldwide.
+                </p>
+              </div>
+
+              <div class="job-card-footer flex gap-3 mt-4">
+                <button
+                  class="bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                >
+                  Interview
+                </button>
+                <button class="bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                  Rejected
+                </button>
+              </div>
+            </div>
+
+            <div class="mobile-2 mt-4 pr-4">
+              <i class="fa-regular text-red-600 fa-trash-can"></i>
+            </div>
+          </div>
+        </div>
+        <div class="job-container w-full mx-auto space-y-6">
+          <div
+            class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
+          >
+            <div class="mobile-1 space-y-2 p-3 mt-4">
+              <div class="job-card-header">
+                <h3 class="text-2xl font-medium">Mobile First Corp</h3>
+                <p class="text-lg text-gray-500">React Native Developer</p>
+              </div>
+
+              <div class="job-card-middle">
+                <ul class="selary flex gap-3 text-sm text-gray-500">
+                  <li><i class="fa-solid fa-dot"></i>Remote</li>
+                  <li><i class="fa-solid fa-dot"></i>Full Time</li>
+                  <li><i class="fa-solid fa-dot"></i>$130000-$175000</li>
+                </ul>
+              </div>
+
+              <div class="job-card-bottom">
+                <p class="text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <br />
+                <p>
+                  Build cross-platform mobile applications using React Native.
+                  Work on products used by millions of users worldwide.
+                </p>
+              </div>
+
+              <div class="job-card-footer flex gap-3 mt-4">
+                <button
+                  class="bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                >
+                  Interview
+                </button>
+                <button class="bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                  Rejected
+                </button>
+              </div>
+            </div>
+
+            <div class="mobile-2 mt-4 pr-4">
+              <i class="fa-regular text-red-600 fa-trash-can"></i>
+            </div>
+          </div>
+        </div>
+        <div class="job-container w-full mx-auto space-y-6">
+          <div
+            class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
+          >
+            <div class="mobile-1 space-y-2 p-3 mt-4">
+              <div class="job-card-header">
+                <h3 class="text-2xl font-medium">Mobile First Corp</h3>
+                <p class="text-lg text-gray-500">React Native Developer</p>
+              </div>
+
+              <div class="job-card-middle">
+                <ul class="selary flex gap-3 text-sm text-gray-500">
+                  <li><i class="fa-solid fa-dot"></i>Remote</li>
+                  <li><i class="fa-solid fa-dot"></i>Full Time</li>
+                  <li><i class="fa-solid fa-dot"></i>$130000-$175000</li>
+                </ul>
+              </div>
+
+              <div class="job-card-bottom">
+                <p class="text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <br />
+                <p>
+                  Build cross-platform mobile applications using React Native.
+                  Work on products used by millions of users worldwide.
+                </p>
+              </div>
+
+              <div class="job-card-footer flex gap-3 mt-4">
+                <button
+                  class="bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                >
+                  Interview
+                </button>
+                <button class="bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                  Rejected
+                </button>
+              </div>
+            </div>
+
+            <div class="mobile-2 mt-4 pr-4">
+              <i class="fa-regular text-red-600 fa-trash-can"></i>
+            </div>
+          </div>
+        </div>
+        <div class="job-container w-full mx-auto space-y-6">
+          <div
+            class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
+          >
+            <div class="mobile-1 space-y-2 p-3 mt-4">
+              <div class="job-card-header">
+                <h3 class="text-2xl font-medium">Mobile First Corp</h3>
+                <p class="text-lg text-gray-500">React Native Developer</p>
+              </div>
+
+              <div class="job-card-middle">
+                <ul class="selary flex gap-3 text-sm text-gray-500">
+                  <li><i class="fa-solid fa-dot"></i>Remote</li>
+                  <li><i class="fa-solid fa-dot"></i>Full Time</li>
+                  <li><i class="fa-solid fa-dot"></i>$130000-$175000</li>
+                </ul>
+              </div>
+
+              <div class="job-card-bottom">
+                <p class="text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <br />
+                <p>
+                  Build cross-platform mobile applications using React Native.
+                  Work on products used by millions of users worldwide.
+                </p>
+              </div>
+
+              <div class="job-card-footer flex gap-3 mt-4">
+                <button
+                  class="bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                >
+                  Interview
+                </button>
+                <button class="bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                  Rejected
+                </button>
+              </div>
+            </div>
+
+            <div class="mobile-2 mt-4 pr-4">
+              <i class="fa-regular text-red-600 fa-trash-can"></i>
+            </div>
+          </div>
+        </div>
+        <div class="job-container w-full mx-auto space-y-6">
+          <div
+            class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
+          >
+            <div class="mobile-1 space-y-2 p-3 mt-4">
+              <div class="job-card-header">
+                <h3 class="text-2xl font-medium">Mobile First Corp</h3>
+                <p class="text-lg text-gray-500">React Native Developer</p>
+              </div>
+
+              <div class="job-card-middle">
+                <ul class="selary flex gap-3 text-sm text-gray-500">
+                  <li><i class="fa-solid fa-dot"></i>Remote</li>
+                  <li><i class="fa-solid fa-dot"></i>Full Time</li>
+                  <li><i class="fa-solid fa-dot"></i>$130000-$175000</li>
+                </ul>
+              </div>
+
+              <div class="job-card-bottom">
+                <p class="text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <br />
+                <p>
+                  Build cross-platform mobile applications using React Native.
+                  Work on products used by millions of users worldwide.
+                </p>
+              </div>
+
+              <div class="job-card-footer flex gap-3 mt-4">
+                <button
+                  class="bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                >
+                  Interview
+                </button>
+                <button class="bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                  Rejected
+                </button>
+              </div>
+            </div>
+
+            <div class="mobile-2 mt-4 pr-4">
+              <i class="fa-regular text-red-600 fa-trash-can"></i>
+            </div>
+          </div>
+        </div>
+        <div class="job-container w-full mx-auto space-y-6">
+          <div
+            class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
+          >
+            <div class="mobile-1 space-y-2 p-3 mt-4">
+              <div class="job-card-header">
+                <h3 class="text-2xl font-medium">Mobile First Corp</h3>
+                <p class="text-lg text-gray-500">React Native Developer</p>
+              </div>
+
+              <div class="job-card-middle">
+                <ul class="selary flex gap-3 text-sm text-gray-500">
+                  <li><i class="fa-solid fa-dot"></i>Remote</li>
+                  <li><i class="fa-solid fa-dot"></i>Full Time</li>
+                  <li><i class="fa-solid fa-dot"></i>$130000-$175000</li>
+                </ul>
+              </div>
+
+              <div class="job-card-bottom">
+                <p class="text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <br />
+                <p>
+                  Build cross-platform mobile applications using React Native.
+                  Work on products used by millions of users worldwide.
+                </p>
+              </div>
+
+              <div class="job-card-footer flex gap-3 mt-4">
+                <button
+                  class="bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                >
+                  Interview
+                </button>
+                <button class="bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                  Rejected
+                </button>
+              </div>
+            </div>
+
+            <div class="mobile-2 mt-4 pr-4">
+              <i class="fa-regular text-red-600 fa-trash-can"></i>
+            </div>
+          </div>
+        </div>
+        <div class="job-container w-full mx-auto space-y-6">
+          <div
+            class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
+          >
+            <div class="mobile-1 space-y-2 p-3 mt-4">
+              <div class="job-card-header">
+                <h3 class="text-2xl font-medium">Mobile First Corp</h3>
+                <p class="text-lg text-gray-500">React Native Developer</p>
+              </div>
+
+              <div class="job-card-middle">
+                <ul class="selary flex gap-3 text-sm text-gray-500">
+                  <li><i class="fa-solid fa-dot"></i>Remote</li>
+                  <li><i class="fa-solid fa-dot"></i>Full Time</li>
+                  <li><i class="fa-solid fa-dot"></i>$130000-$175000</li>
+                </ul>
+              </div>
+
+              <div class="job-card-bottom">
+                <p class="text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <br />
+                <p>
+                  Build cross-platform mobile applications using React Native.
+                  Work on products used by millions of users worldwide.
+                </p>
+              </div>
+
+              <div class="job-card-footer flex gap-3 mt-4">
+                <button
+                  class="bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                >
+                  Interview
+                </button>
+                <button class="bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                  Rejected
+                </button>
+              </div>
+            </div>
+
+            <div class="mobile-2 mt-4 pr-4">
+              <i class="fa-regular text-red-600 fa-trash-can"></i>
+            </div>
+          </div>
+        </div>
+        <div class="job-container w-full mx-auto space-y-6">
+          <div
+            class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
+          >
+            <div class="mobile-1 space-y-2 p-3 mt-4">
+              <div class="job-card-header">
+                <h3 class="text-2xl font-medium">Mobile First Corp</h3>
+                <p class="text-lg text-gray-500">React Native Developer</p>
+              </div>
+
+              <div class="job-card-middle">
+                <ul class="selary flex gap-3 text-sm text-gray-500">
+                  <li><i class="fa-solid fa-dot"></i>Remote</li>
+                  <li><i class="fa-solid fa-dot"></i>Full Time</li>
+                  <li><i class="fa-solid fa-dot"></i>$130000-$175000</li>
+                </ul>
+              </div>
+
+              <div class="job-card-bottom">
+                <p class="text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <br />
+                <p>
+                  Build cross-platform mobile applications using React Native.
+                  Work on products used by millions of users worldwide.
+                </p>
+              </div>
+
+              <div class="job-card-footer flex gap-3 mt-4">
+                <button
+                  class="bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                >
+                  Interview
+                </button>
+                <button class="bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                  Rejected
+                </button>
+              </div>
+            </div>
+
+            <div class="mobile-2 mt-4 pr-4">
+              <i class="fa-regular text-red-600 fa-trash-can"></i>
+            </div>
+          </div>
+        </div>
+
+
+
+        
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
