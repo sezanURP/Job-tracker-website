@@ -15,4 +15,38 @@ In below the difference of these:
  #querySelectorAll(): This is the sibling to querySelector, also using CSS selectors, but designed to grab everything that matches. It searches the DOM using a CSS selector and gathers all matches.
  It'd return a NodeList.
 
- Question 2:  How do you create and insert a new element into the DOM?
+ Question 2:  How do you create and insert a new element into the DOM? 
+
+ Answer: To create a new element into the DOM may we use-
+
+ -document.createElement("tagName"): let newDiv = document.createElement("div")
+
+ -add text: newDiv.textContent = "Hello World";
+ -add HTML: newDiv.innerHTML = "<strong>Hello</strong>";
+ -add class name: newDiv.className = "box";
+ -add id: newDiv.id = "mainBox";
+ -To set a attribute: 
+ newDiv.setAttribute("data-role", "container");
+
+
+To insert a element by using DOM-
+
+-to select a parent like " let parent = document.getElementById("container");"
+
+-insert by append(): parent.append(newDiv);
+
+-insert by appendhild(): 
+   parent.appendChild(newDiv);
+
+Question 3:  What is Event Bubbling? And how does  it work?
+
+Answer:  Event Bubbling means When an event happens on a child element, it first runs on that element, then “bubbles up” to its parent, then to the grandparent, and continues upward until it reaches the root (document). So the event move Child > parent > grandParent > document.
+
+Event Bubbling happens in phase 3. Such 
+-Capturing Phase (top → down)
+
+-Target Phase (on clicked element)
+
+-Bubbling Phase (bottom → up)
+
+
