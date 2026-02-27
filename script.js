@@ -101,3 +101,49 @@ updateCounts();
 document.querySelectorAll(".job-container .mobile").forEach((card) => {
   card.addEventListener("click", updateCounts);
 });
+
+
+
+// Empty state display logic
+
+function checkEmptyState() {
+  const totalCards = document.querySelectorAll(".job-container .mobile").length;
+  const interviewCards = document.querySelectorAll(
+    "#interviews-card .mobile",
+  ).length;
+  const rejectedCards = document.querySelectorAll(
+    "#rejected-card .mobile",
+  ).length;
+
+  const emptyState = document.getElementById("empty-state");
+
+
+  if (totalCards === 0) {
+    emptyState.classList.remove("hidden");
+    emptyState.innerHTML =
+      '<p class="text-gray-500 text-3xl mx-auto">No jobs yet</p>';
+  } else {
+    emptyState.classList.add("hidden");
+  }
+
+  if (interviewCards === 0 && totalCards > 0) {
+    emptyState.classList.remove("hidden");
+    // emptyState.innerHTML = "<p class=\"text-gray-500 text-3xl mx-auto\"><i class=\"fa-duotone fa-solid fa-book-open-lines\">  </i> <br> No interviews yet</p>";
+  } else {
+    emptyState.classList.add("hidden");
+  }
+
+  if (rejectedCards === 0 && totalCards > 0) {
+    emptyState.classList.remove("hidden");
+    // emptyState.innerHTML = "<p class=\"text-gray-500 text-3xl mx-auto\"><i class=\"fa-duotone fa-solid fa-book-open-lines\">  </i> <br> No rejections yet</p>";
+  } else {
+    emptyState.classList.add("hidden");
+  }
+
+  
+}
+checkEmptyState();
+
+document.querySelectorAll(".job-container .mobile").forEach((card) => {
+  card.addEventListener("click", checkEmptyState);
+});
