@@ -75,3 +75,29 @@ document.querySelectorAll("main .job-container .mobile").forEach((card) => {
   });
 });
 
+// Card count update functionality
+
+const totalUpdate = document.getElementById("total-count");
+const interviewsUpdate = document.getElementById("interviews-count");
+const rejectedUpdate = document.getElementById("rejected-count");
+
+function updateCounts() {
+  const totalCards = document.querySelectorAll(".job-container .mobile").length;
+  const interviewCards = document.querySelectorAll(
+    "#interviews-card .mobile",
+  ).length;
+  const rejectedCards = document.querySelectorAll(
+    "#rejected-card .mobile",
+  ).length;
+
+  totalUpdate.innerText = totalCards;
+  jobsCount.innerText = `${interviewCards + rejectedCards} of ${allCard.children.length} jobs`;
+  interviewsUpdate.innerText = interviewCards;
+  rejectedUpdate.innerText = rejectedCards;
+}
+
+updateCounts();
+
+document.querySelectorAll(".job-container .mobile").forEach((card) => {
+  card.addEventListener("click", updateCounts);
+});
