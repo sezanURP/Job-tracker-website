@@ -20,16 +20,16 @@
       <h2 class="text-4xl font-bold">Job Application Tracker</h2>
       <div class="container grid grid-cols-3 gap-4 mt-2">
         <div class="job p-3 bg-gray-200 rounded-[10px]">
-          <p>Total</p>
-          <p id="total-count">0</p>
+          <p class="font-bold">Total</p>
+          <p id="total-count" class="text-xl font-bold">0</p>
         </div>
         <div class="job p-3 bg-gray-200 rounded-[10px]">
-          <p>Interviews</p>
-          <p id="interviews-count" class="text-green-600">0</p>
+          <p class="font-bold">Interviews</p>
+          <p id="interviews-count" class="text-green-600 font-bold text-xl">0</p>
         </div>
         <div class="job p-3 bg-gray-200 rounded-[10px]">
-          <p>Rejected</p>
-          <p id="rejected-count" class="text-red-500">0</p>
+          <p class="font-bold">Rejected</p>
+          <p id="rejected-count" class="text-red-500 font-bold text-xl">0</p>
         </div>
       </div>
     </header>
@@ -38,23 +38,23 @@
 
     <main class="w-[80%] mx-auto">
       <div class="flex justify-between items-center mb-3">
-      <h2 class="text-2xl pb-6 font-medium">Available Jobs</h2>
-      <p id="jobs-count">0 jobs</p>
+      <h2 class="text-2xl pb-6 font-bold">Available Jobs</h2>
+      <p id="jobs-count" class="text-xl font-bold">0 jobs</p>
       </div>
       <button onclick="toggleStyle('all-btn')"
-        class="bg-blue-500 text-white border font-medium px-4 py-2 mr-3.5 rounded-[10px]"
+        class="bg-blue-500 text-white border font-bold px-4 py-2 mr-3.5 rounded-[10px]"
         id="all-btn"
       >
         All
       </button>
       <button onclick="toggleStyle('interviews-btn')"
-        class=" border font-medium px-4 py-2 mr-3.5 rounded-[10px]"
+        class=" border font-bold px-4 py-2 mr-3.5 rounded-[10px]"
         id="interviews-btn"
       >
         Interviews
       </button>
       <button onclick="toggleStyle('rejected-btn')"
-        class="border font-medium px-4 py-2 rounded-[10px]"
+        class="border font-bold px-4 py-2 rounded-[10px]"
         id="rejected-btn"
       >
         Rejected
@@ -67,7 +67,7 @@
 
 
         <div class="job-container w-full mx-auto space-y-6">
-          <div id="1st"
+          <div 
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
             <div class="mobile-1 space-y-2 p-3 mt-4">
@@ -95,11 +95,11 @@
 
               <div class="job-card-footer flex gap-3 mt-4">
                 <button
-                  class=" interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                  class=" interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px] hover:bg-green-400"
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
                   Rejected
                 </button>
               </div>
@@ -115,7 +115,7 @@
 
 
         <div class="job-container w-full mx-auto space-y-6">
-          <div id="2nd"
+          <div
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
             <div class="web-1 space-y-2 p-3 mt-4">
@@ -133,7 +133,7 @@
               </div>
 
               <div class="job-card-bottom">
-                <p class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <button class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</button>
                 <br />
                 <p>
                   Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.
@@ -142,11 +142,11 @@
 
               <div class="job-card-footer flex gap-3 mt-4">
                 <button
-                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px] hover:bg-green-400"
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
                   Rejected
                 </button>
               </div>
@@ -163,7 +163,7 @@
 
 
         <div class="job-container w-full mx-auto space-y-6">
-          <div id="3rd" 
+          <div 
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
 
@@ -192,11 +192,11 @@
 
               <div class="job-card-footer flex gap-3 mt-4">
                 <button
-                  class=" interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                  class=" interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px] hover:bg-green-400"
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400  ">
                   Rejected
                 </button>
               </div>
@@ -212,7 +212,7 @@
 
 
         <div class="job-container w-full mx-auto space-y-6">
-          <div id="4th" 
+          <div 
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
             <div class="mobile-1 space-y-2 p-3 mt-4">
@@ -239,11 +239,11 @@
 
               <div class="job-card-footer flex gap-3 mt-4">
                 <button
-                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px] hover:bg-green-400"
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
                   Rejected
                 </button>
               </div>
@@ -259,7 +259,7 @@
 
 
         <div class="job-container w-full mx-auto space-y-6">
-          <div id="5th"
+          <div
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
             <div class="mobile-1 space-y-2 p-3 mt-4">
@@ -286,11 +286,11 @@
 
               <div class="job-card-footer flex gap-3 mt-4">
                 <button
-                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px] hover:bg-green-400"
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
                   Rejected
                 </button>
               </div>
@@ -307,7 +307,7 @@
 
 
         <div class="job-container w-full mx-auto space-y-6">
-          <div id="6th"
+          <div
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
             <div class="mobile-1 space-y-2 p-3 mt-4">
@@ -334,11 +334,11 @@
 
               <div class="job-card-footer flex gap-3 mt-4">
                 <button
-                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px] hover:bg-green-400"
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
                   Rejected
                 </button>
               </div>
@@ -355,7 +355,7 @@
 
 
         <div class="job-container w-full mx-auto space-y-6">
-          <div id="7th"
+          <div
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
             <div class="mobile-1 space-y-2 p-3 mt-4">
@@ -382,11 +382,11 @@
 
               <div class="job-card-footer flex gap-3 mt-4">
                 <button
-                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px]"
+                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px] hover:bg-green-400"
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px]">
+                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
                   Rejected
                 </button>
               </div>
@@ -402,7 +402,7 @@
 
 
         <div  class="job-container w-full mx-auto space-y-6">
-          <div id="8th"
+          <div
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
             <div class="mobile-1 space-y-2 p-3 mt-4">
@@ -457,8 +457,15 @@
       <section id="rejected-card" class="hidden">
         <h2 class="text-2xl pt-6 font-medium">Rejected</h2> 
       </section>
+
+
+      <section id="empty-state" class="hidden text-center py-10">
+       <img class="mx-auto" src="./jobs.png" alt="">
+        <p class="text-gray-500 text-3xl mx-auto">No jobs Available</p>
+      </section>
+
     </main>
     <script src="./script.js"></script>
-    <!-- <script src="./Practice.js"></script> -->
+    
   </body>
 </html>
