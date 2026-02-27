@@ -15,6 +15,9 @@ In below the difference of these:
  #querySelectorAll(): This is the sibling to querySelector, also using CSS selectors, but designed to grab everything that matches. It searches the DOM using a CSS selector and gathers all matches.
  It'd return a NodeList.
 
+
+
+
  Question 2:  How do you create and insert a new element into the DOM? 
 
  Answer: To create a new element into the DOM may we use-
@@ -38,6 +41,9 @@ To insert a element by using DOM-
 -insert by appendhild(): 
    parent.appendChild(newDiv);
 
+
+
+
 Question 3:  What is Event Bubbling? And how does  it work?
 
 Answer:  Event Bubbling means When an event happens on a child element, it first runs on that element, then “bubbles up” to its parent, then to the grandparent, and continues upward until it reaches the root (document). So the event move Child > parent > grandParent > document.
@@ -49,4 +55,21 @@ Event Bubbling happens in phase 3. Such
 
 -Bubbling Phase (bottom → up)
 
+
+
+Question 4:  What is Event Delegation in JavaScript? Why is it useful?
+
+Answer: Event Delegation is a technique where instead of adding event listeners to multiple child elements, add a single event listener to their parent and handle events using event bubbling.
+Useful of it:
+-If add a new button later, It still works. 
+No need to add event listener again.
+-it's works for dynamic elements
+
+
+
+Question 5: What is the difference between preventDefault() and stopPropagation() methods?
+
+Answer: preventDefault() means stops the browser’s default behavior of an element. It does not stop event bubbling.
+
+On the other hand,stopPropagation() means  Stops the event from bubbling (or capturing) to parent elements. It does not stop default browser behavior.
 
