@@ -25,7 +25,9 @@
         </div>
         <div class="job p-3 bg-gray-200 rounded-[10px]">
           <p class="font-bold">Interviews</p>
-          <p id="interviews-count" class="text-green-600 font-bold text-xl">0</p>
+          <p id="interviews-count" class="text-green-600 font-bold text-xl">
+            0
+          </p>
         </div>
         <div class="job p-3 bg-gray-200 rounded-[10px]">
           <p class="font-bold">Rejected</p>
@@ -38,36 +40,34 @@
 
     <main class="w-[80%] mx-auto">
       <div class="flex justify-between items-center mb-3">
-      <h2 class="text-2xl pb-6 font-bold">Available Jobs</h2>
-      <p id="jobs-count" class="text-xl font-bold">0 jobs</p>
+        <h2 class="text-2xl pb-6 font-bold">Available Jobs</h2>
+        <p id="jobs-count" class="text-xl font-bold">0 jobs</p>
       </div>
-      <button onclick="toggleStyle('all-btn')"
+      <button
+        onclick="toggleStyle('all-btn')"
         class="bg-blue-500 text-white border font-bold px-4 py-2 mr-3.5 rounded-[10px]"
         id="all-btn"
       >
         All
       </button>
-      <button onclick="toggleStyle('interviews-btn')"
-        class=" border font-bold px-4 py-2 mr-3.5 rounded-[10px]"
+      <button
+        onclick="toggleStyle('interviews-btn')"
+        class="border font-bold px-4 py-2 mr-3.5 rounded-[10px]"
         id="interviews-btn"
       >
         Interviews
       </button>
-      <button onclick="toggleStyle('rejected-btn')"
+      <button
+        onclick="toggleStyle('rejected-btn')"
         class="border font-bold px-4 py-2 rounded-[10px]"
         id="rejected-btn"
       >
         Rejected
       </button>
 
-
-
-
-      <section class=" w-full mx-auto" id="all-card">
-
-
+      <section class="w-full mx-auto" id="all-card">
         <div class="job-container w-full mx-auto space-y-6">
-          <div 
+          <div
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
             <div class="mobile-1 space-y-2 p-3 mt-4">
@@ -85,7 +85,11 @@
               </div>
 
               <div class="job-card-bottom">
-                <p class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <p
+                  class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200"
+                >
+                  Not Applied
+                </p>
                 <br />
                 <p>
                   Build cross-platform mobile applications using React Native.
@@ -95,24 +99,28 @@
 
               <div class="job-card-footer flex gap-3 mt-4">
                 <button
-                  class=" interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px] hover:bg-green-400"
+                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px] hover:bg-green-400"
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
+                <button
+                  class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400"
+                >
                   Rejected
                 </button>
               </div>
             </div>
 
             <div class="mobile-2 mt-4 pr-4">
-              <Button title="Delete" class="delete-btn hover:bg-red-200 rounded-[10px] p-4">
-              <i class=" fa-regular text-red-600 fa-trash-can"></i>
-              </Button>
+              <button
+                title="Delete"
+                class="delete-btn hover:bg-red-200 rounded-[10px] p-4"
+              >
+                <i class="fa-regular text-red-600 fa-trash-can"></i>
+              </button>
             </div>
           </div>
         </div>
-
 
         <div class="job-container w-full mx-auto space-y-6">
           <div
@@ -126,17 +134,22 @@
 
               <div class="job-card-middle">
                 <ul class="selary flex gap-3 text-sm text-gray-500">
-                  <li><i class="fa-solid fa-dot"></i>Los Angeles,CA </li>
+                  <li><i class="fa-solid fa-dot"></i>Los Angeles,CA</li>
                   <li><i class="fa-solid fa-dot"></i>Part-time</li>
                   <li><i class="fa-solid fa-dot"></i>$80000-$120000</li>
                 </ul>
               </div>
 
               <div class="job-card-bottom">
-                <button class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</button>
+                <button
+                  class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200"
+                >
+                  Not Applied
+                </button>
                 <br />
                 <p>
-                  Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.
+                  Create stunning web experiences for high-profile clients. Must
+                  have portfolio and experience with modern web design trends.
                 </p>
               </div>
 
@@ -146,31 +159,35 @@
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
+                <button
+                  class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400"
+                >
                   Rejected
                 </button>
               </div>
             </div>
 
             <div class="mobile-2 mt-4 pr-4">
-             <Button title="Delete" class="delete-btn hover:bg-red-200 rounded-[10px] p-4">
-              <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
-              </Button>
+              <button
+                title="Delete"
+                class="delete-btn hover:bg-red-200 rounded-[10px] p-4"
+              >
+                <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
+              </button>
             </div>
           </div>
         </div>
 
-
-
         <div class="job-container w-full mx-auto space-y-6">
-          <div 
+          <div
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
-
             <div class="mobile-1 space-y-2 p-3 mt-4">
               <div class="job-card-header">
                 <h3 class="text-2xl font-medium">DataViz Solutions</h3>
-                <p class="text-lg text-gray-500">Data Visualization Specialist</p>
+                <p class="text-lg text-gray-500">
+                  Data Visualization Specialist
+                </p>
               </div>
 
               <div class="job-card-middle">
@@ -182,37 +199,45 @@
               </div>
 
               <div class="job-card-bottom">
-                <p class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <p
+                  class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200"
+                >
+                  Not Applied
+                </p>
                 <br />
                 <p>
-                 Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
-
+                  Transform complex data into compelling visualizations.
+                  Required skills: D3.js, React, and strong analytical thinking.
                 </p>
               </div>
 
               <div class="job-card-footer flex gap-3 mt-4">
                 <button
-                  class=" interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px] hover:bg-green-400"
+                  class="interview-btn bg-green-200 font-medium px-4 py-2 rounded-[10px] hover:bg-green-400"
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400  ">
+                <button
+                  class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400"
+                >
                   Rejected
                 </button>
               </div>
             </div>
 
             <div class="mobile-2 mt-4 pr-4">
-             <Button title="Delete" class="delete-btn hover:bg-red-200 rounded-[10px] p-4">
-              <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
-              </Button>
+              <button
+                title="Delete"
+                class="delete-btn hover:bg-red-200 rounded-[10px] p-4"
+              >
+                <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
+              </button>
             </div>
           </div>
         </div>
 
-
         <div class="job-container w-full mx-auto space-y-6">
-          <div 
+          <div
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
             <div class="mobile-1 space-y-2 p-3 mt-4">
@@ -230,10 +255,16 @@
               </div>
 
               <div class="job-card-bottom">
-                <p class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <p
+                  class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200"
+                >
+                  Not Applied
+                </p>
                 <br />
                 <p>
-                 Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.
+                  Design and maintain scalable backend systems using Python and
+                  AWS. Work with modern DevOps practices and cloud
+                  infrastructure.
                 </p>
               </div>
 
@@ -243,20 +274,24 @@
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
+                <button
+                  class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400"
+                >
                   Rejected
                 </button>
               </div>
             </div>
 
             <div class="mobile-2 mt-4 pr-4">
-              <Button title="Delete" class="delete-btn hover:bg-red-200 rounded-[10px] p-4">
-              <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
-              </Button>
+              <button
+                title="Delete"
+                class="delete-btn hover:bg-red-200 rounded-[10px] p-4"
+              >
+                <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
+              </button>
             </div>
           </div>
         </div>
-
 
         <div class="job-container w-full mx-auto space-y-6">
           <div
@@ -277,10 +312,16 @@
               </div>
 
               <div class="job-card-bottom">
-                <p class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <p
+                  class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200"
+                >
+                  Not Applied
+                </p>
                 <br />
                 <p>
-                  Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.
+                  Create beautiful and functional user interfaces for our suite
+                  of products. Strong design skills and frontend development
+                  expertise required.
                 </p>
               </div>
 
@@ -290,21 +331,24 @@
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
+                <button
+                  class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400"
+                >
                   Rejected
                 </button>
               </div>
             </div>
 
             <div class="mobile-2 mt-4 pr-4">
-             <Button title="Delete" class="delete-btn hover:bg-red-200 rounded-[10px] p-4">
-              <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
-              </Button>
+              <button
+                title="Delete"
+                class="delete-btn hover:bg-red-200 rounded-[10px] p-4"
+              >
+                <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
+              </button>
             </div>
           </div>
         </div>
-
-
 
         <div class="job-container w-full mx-auto space-y-6">
           <div
@@ -325,10 +369,16 @@
               </div>
 
               <div class="job-card-bottom">
-                <p class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <p
+                  class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200"
+                >
+                  Not Applied
+                </p>
                 <br />
                 <p>
-                  Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.
+                  Build enterprise applications with JavaScript and modern
+                  frameworks. We offer competitive compensation, health
+                  insurance, and professional development opportunities.
                 </p>
               </div>
 
@@ -338,21 +388,24 @@
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
+                <button
+                  class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400"
+                >
                   Rejected
                 </button>
               </div>
             </div>
 
             <div class="mobile-2 mt-4 pr-4">
-              <Button title="Delete" class="delete-btn hover:bg-red-200 rounded-[10px] p-4">
-              <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
-              </Button>
+              <button
+                title="Delete"
+                class="delete-btn hover:bg-red-200 rounded-[10px] p-4"
+              >
+                <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
+              </button>
             </div>
           </div>
         </div>
-
-
 
         <div class="job-container w-full mx-auto space-y-6">
           <div
@@ -373,10 +426,16 @@
               </div>
 
               <div class="job-card-bottom">
-                <p class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <p
+                  class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200"
+                >
+                  Not Applied
+                </p>
                 <br />
                 <p>
-                  Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.
+                  Join our fast-growing startup and work on our core platform.
+                  Experience with Node.js and React required. Great benefits and
+                  equity package included.
                 </p>
               </div>
 
@@ -386,22 +445,26 @@
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400">
+                <button
+                  class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400"
+                >
                   Rejected
                 </button>
               </div>
             </div>
 
             <div class="mobile-2 mt-4 pr-4">
-              <Button title="Delete" class="delete-btn hover:bg-red-200 rounded-[10px] p-4">
-              <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
-              </Button>
+              <button
+                title="Delete"
+                class="delete-btn hover:bg-red-200 rounded-[10px] p-4"
+              >
+                <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
+              </button>
             </div>
           </div>
         </div>
 
-
-        <div  class="job-container w-full mx-auto space-y-6">
+        <div class="job-container w-full mx-auto space-y-6">
           <div
             class="mobile flex justify-between bg-emerald-50 border border-gray-200 rounded-[10px] mt-5"
           >
@@ -420,10 +483,16 @@
               </div>
 
               <div class="job-card-bottom">
-                <p class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200">Not Applied</p>
+                <p
+                  class="status text-lg font-normal w-max rounded-[10px] px-4 py-2 bg-gray-200"
+                >
+                  Not Applied
+                </p>
                 <br />
                 <p>
-                 We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.
+                  We are looking for an experienced Frontend Developer to build
+                  scalable web applications using React and TypeScript. You will
+                  work with a talented team on cutting-edge projects.
                 </p>
               </div>
 
@@ -433,39 +502,39 @@
                 >
                   Interview
                 </button>
-                <button class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400 ">
+                <button
+                  class="rejected-btn bg-red-200 font-medium px-4 py-2 rounded-[10px] hover:bg-red-400"
+                >
                   Rejected
                 </button>
               </div>
             </div>
 
             <div class="mobile-2 mt-4 pr-4">
-              <Button title="Delete" class="delete-btn hover:bg-red-200 rounded-[10px] p-4">
-              <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
-              </Button>
+              <button
+                title="Delete"
+                class="delete-btn hover:bg-red-200 rounded-[10px] p-4"
+              >
+                <i class="delete-btn fa-regular text-red-600 fa-trash-can"></i>
+              </button>
             </div>
           </div>
         </div>
-
-        
       </section>
 
       <section id="interviews-card" class="hidden">
-        <h2 class="text-2xl pt-6 font-medium">Interviews</h2>
+        <h2 class="text-2xl pt-6 font-medium"></h2>
       </section>
 
       <section id="rejected-card" class="hidden">
-        <h2 class="text-2xl pt-6 font-medium">Rejected</h2> 
+        <h2 class="text-2xl pt-6 font-medium"></h2>
       </section>
-
 
       <section id="empty-state" class="hidden text-center py-10">
-       <img class="mx-auto" src="./jobs.png" alt="">
+        <img class="mx-auto" src="./jobs.png" alt="" />
         <p class="text-gray-500 text-3xl mx-auto">No jobs Available</p>
       </section>
-
     </main>
     <script src="./script.js"></script>
-    
   </body>
 </html>
